@@ -36,7 +36,7 @@ Dynamic DNS system using [dnspython](http://www.dnspython.org/)
     proxy_pass http://localhost:8000/;
   }
   ```
-+ Step 3: Use crontab to automate the script [client_side](/client_side.sh) every 5 minutes.
++ Step 3: Use [crontab](https://en.wikipedia.org/wiki/Cron) to automate the script [client_side](/client_side.sh) every 5 minutes.
 
   ```
   chmod u+x backup.sh
