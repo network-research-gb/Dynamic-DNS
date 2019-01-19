@@ -126,3 +126,5 @@ Dynamic DNS system using [dnspython](http://www.dnspython.org/)
       5 * * * * /bin/bash /home/flightstar/client_side.sh
       5 * * * * /home/flightstar/client_side.sh
       ```
+      
+  Ngoài để xem các crontab thì dùng lệnh: `crontab -l` và xóa crontab thfi dùng lệnh: `crontab -r`
