@@ -18,7 +18,7 @@ if [ "${curip}" != "${homeip}" ]; then
         warnmsg="/!\\ home IP changed to ${curip} /!\\"
 
         echo "${warnmsg}"|mail -s "${warnmsg}" me@mydomain.net
-
+        # Update address to httpbin.org/ip
         curl -u ${auth} \
                 -X POST https://my.public.server/dyndns/update/${domain}/${name}/${curip}
 fi
