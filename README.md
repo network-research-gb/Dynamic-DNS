@@ -65,6 +65,17 @@ Dynamic DNS system using [dnspython](http://www.dnspython.org/)
     # | | | | .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
 
     ```
+  + Crontab special syntax:
+    
+    ```
+    @hourly  - Shorthand for 0 * * * *
+    @daily   - Shorthand for 0 0 * * *
+    @weekly  - Shorthand for 0 0 * * 0
+    @monthly - Shorthand for 0 0 1 * *
+    @yearly  - Shorthand for 0 0 1 1 *
+    @reboot  - Runs the command once at startup
+    ```
+    
   + Crontab example
     
     ```
