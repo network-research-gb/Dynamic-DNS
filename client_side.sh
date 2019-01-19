@@ -4,6 +4,7 @@ PATH=${PATH}:/sbin:/usr/sbin:/bin:/usr/bin:/usr/pkg/bin
 
 name="mybox"
 domain="mydomain"
+# Fully qualified domain name
 fqdn="${name}.${domain}"
 # access into Ubuntu server 
 auth="user:password"
