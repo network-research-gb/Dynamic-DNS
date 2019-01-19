@@ -57,5 +57,29 @@ Dynamic DNS system using [dnspython](http://www.dnspython.org/)
     ```
     *      *    *    *    *           <user>  <command>
     minute hour day month day_of_week <user>  <command>
+    
+    # .---------------- minute (0 - 59)
+    # | .------------- hour (0 - 23)
+    # | | .---------- day of month (1 - 31)
+    # | | | .------- month (1 - 12) OR jan,feb,mar,apr ...
+    # | | | | .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+
     ```
   + Crontab example
+    
+    ```
+    # Run a command every minute
+    * * * * * 
+    # Run a command every 12th minute on the hour
+    12 * * * *
+    # Run a command every 15 minutes
+    0,15,30,45 * * * *
+    # Run a command every day at 4:00am
+    0 4 * * *
+    # Run a command every Tuesday at 4:00am
+    0 4 * * 2
+    # Run the command every 15 minutes and between the hours of 2:00am and 6:00am
+    */4 2-6 * * *
+
+    ```
+  + Configure cron jobs to schedule on Ubuntu
