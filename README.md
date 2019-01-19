@@ -1,4 +1,4 @@
-# Dynamic-DNS
+# [Dynamic DNS](https://en.wikipedia.org/wiki/Dynamic_DNS)
 A small [No-IP](https://en.wikipedia.org/wiki/No-IP) services
 
 Dynamic DNS system using [dnspython](http://www.dnspython.org/)
