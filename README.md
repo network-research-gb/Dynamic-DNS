@@ -1,5 +1,5 @@
 # Dynamic-DNS
-A small No-IP services
+A small [No-IP](https://en.wikipedia.org/wiki/No-IP) services
 
 Dynamic DNS system using [dnspython](http://www.dnspython.org/)
 
@@ -94,3 +94,35 @@ Dynamic DNS system using [dnspython](http://www.dnspython.org/)
 
     ```
   + Configure cron jobs to schedule on Ubuntu
+    + Open terminal 
+    + First, let’s edit the crontab the following command:  
+      
+      ```
+      crontab -e
+      ```
+      
+      Hiện ra một khung như hình dưới:
+      
+      ![](https://lh3.googleusercontent.com/9o4Ldu3KpSWw8e6QiCjwZY9SrGE2CcPziWGU6mmB53cMXnBBi2qA7MTTBS8gXNS1tq3DQ9pGSAsFLl0PeHtZPzVctauqfqQg5AyFCh394BypQW4288hG4wy6NWEQCJYzEP4gK5mwbj0aWXemmftBRZfR-oRTbPX-tspIN6CWo7sTlp6scp76HQhbQcunoWkYx8gq5n6srx4nN-nT7Har8vfyWT7sQF15TtrzJXsv0EmY0Yw1P0T8Ge-vQneifLkSZPld3g53Byu05NgVquFSJ-yXvTCPxxdl-G92diB-ZqTFYmhMlNtmVdPEz3ytTj8FvdDdIFGu6wDvsZzQrXu60pi2vaNoQ-juHAkqXZ_QdoJbafxTTsKR00i34ATgMOKPui8BURznpZQOKMd00n3JW-CPACTQ16RhwrhBr_nnLEvw4x9EofMucngLqN7cUxdE3ppQl0zrHUDjTWaMeKOZceYUmtHrnoU6e1ofTC-7GhbF6PgksKZ1-cj0a1FXMnYOhs9zQDhM9BW1dUbI1C8epq0uo_kSVS_cCy3W2eUxR61I5p0C0CQ5Kt8tbgikuDaEabCzXwh_E7G1pW9_VXC4RiObY5LMajCjAOsx-5G-2yu6ZY3ifWDkHulKYA5etMLIAvUZ4TPtZ2YBz7xKWIqNQpRVSJCNV8M-jgZ7nYSMuKeb0Svy9gRIFg-wcY08TuJ61w3eE-LBrDE7YIFXHA=w565-h389-no)
+    + Input:
+      
+      ```
+      SHELL=/bin/bash
+      PATH=/sbin:/bin:/usr/sbin:/usr/bin
+      MAILTO=root
+      
+      #This is a comment
+      * * * * * echo 'Run this command every minute' >> file.log
+      ```
+      
+      Trong project, dynamic DNS update 5 phút 1 lần:
+      
+      ```
+      SHELL=/bin/bash
+      PATH=/sbin:/bin:/usr/sbin:/usr/bin
+      MAILTO=root
+      
+      #This is a comment
+      5 * * * * /bin/bash /home/flightstar/client_side.sh
+      5 * * * * /home/flightstar/client_side.sh
+      ```
