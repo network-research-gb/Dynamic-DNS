@@ -122,7 +122,6 @@ Dynamic DNS system using [dnspython](http://www.dnspython.org/)
       PATH=/sbin:/bin:/usr/sbin:/usr/bin
       MAILTO=root
       
-      #This is a comment
       5 * * * * /bin/bash /home/flightstar/client_side.sh
       5 * * * * /home/flightstar/client_side.sh
       ```
